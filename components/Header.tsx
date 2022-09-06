@@ -1,9 +1,12 @@
 import NavButton from "./NavButton";
 import { Bars3Icon } from '@heroicons/react/24/solid';
-
+import { useAddress, useDisconnect } from "@thirdweb-dev/react";
 const testImage = '/polygon.png'
 
 const Header = () => {
+    const address = useAddress();
+    const disconnect = useDisconnect();
+
   return (
     <header className="grid grid-cols-2 md:grid-cols-5 justify-between items-center p-5">
         <div className="flex items-center space-x-2">
@@ -14,19 +17,19 @@ const Header = () => {
             />
             <div>
                 <h1 className="text-lg text-white font-bold">Way2Icy</h1>
-                <p>0x1732687346234</p>
+                <p className="">Wallet: {address?.substring(0,5)}...{address?.substring(address.length, address.length - 5)}</p>
             </div>
         </div>
         <div className="hidden md:flex md:col-span-3 items-center justify-center rounded-lg">
             <div className="bg-[#451536] p-2 space-x-2 shadow-lg">
                 <NavButton isActive title='Enter Lottery'/>
-                <NavButton title='Logout'/>
+                <NavButton onClick={disconnect} title='Logout'/>
             </div>
         </div>
         <div className="flex flex-col ml-auto text-right">
             <Bars3Icon className="h-8 w-8 m-auto text-white cursor-pointer"/>
             <span className="md:hidden">
-                <NavButton title='Logout' />
+                <NavButton onClick={disconnect} title='Logout' />
             </span>
         </div>
         
