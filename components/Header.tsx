@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="grid grid-cols-2 md:grid-cols-5 justify-between items-center p-5">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 bg-[#0000004b] p-1 pl-3 rounded-md shadow-md">
             <img
                 className="rounded-full h-10 w-10"
                 src={testImage}
@@ -17,11 +17,11 @@ const Header = () => {
             />
             <div>
                 <h1 className="text-lg text-white font-bold">Way2Icy</h1>
-                <p className="">Wallet: {address?.substring(0,5)}...{address?.substring(address.length, address.length - 5)}</p>
+                <p className="text-gray-300">Wallet: {address?.substring(0,5)}...{address?.substring(address.length, address.length - 5)}</p>
             </div>
         </div>
         <div className="hidden md:flex md:col-span-3 items-center justify-center rounded-lg">
-            <div className="bg-[#451536] p-2 space-x-2 shadow-lg">
+            <div className="bg-[#451536] p-2 space-x-2 shadow-lg rounded-md">
                 <NavButton isActive title='Enter Lottery'/>
                 <NavButton onClick={disconnect} title='Logout'/>
             </div>
