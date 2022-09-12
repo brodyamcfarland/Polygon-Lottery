@@ -11,12 +11,12 @@ const Header = () => {
     <header className="grid grid-cols-2 md:grid-cols-5 justify-between items-center p-5">
         <div className="flex items-center space-x-2 bg-[#00000070] p-1 pl-3 rounded-md shadow-md">
             <img
-                className="rounded-full h-10 w-10"
+                className="rounded-full h-10 w-10 border-2 border-[#5a264a] bg-[#00000075]"
                 src={testImage}
                 alt='avatar'
             />
             <div>
-                <h1 className="text-lg text-white font-bold">Way2Icy</h1>
+                <h1 className="text-lg text-white font-bold">Polygon Lottery</h1>
                 <p className="text-gray-300">Wallet: {address?.substring(0,5)}...{address?.substring(address.length, address.length - 5)}</p>
             </div>
         </div>
