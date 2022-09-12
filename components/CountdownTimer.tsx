@@ -20,7 +20,7 @@ const CountdownTimer = () => {
                     <div>
                         <h2 className='text-white text-lg text-center animate-bounce'>Ticket Sales are now CLOSED.</h2>
                     </div>
-                    <div className='flex space-x-6'>
+                    <div className='flex flex-col md:flex-row space-x-5'>
                         <div className='flex-1'>
                             <div className='countdown animate-pulse'>{hours}</div>
                             <div className='countdown-label'>Hours</div>
@@ -42,7 +42,7 @@ const CountdownTimer = () => {
             return (
                 <div>
                     <h3 className='text-white text-sm mb-2 italic'>Time Remaining</h3>
-                    <div className='flex space-x-6'>
+                    <div className='flex flex-col md:flex-row md:space-x-6'>
                         <div className='flex-1'>
                             <div className='countdown'>{hours}</div>
                             <div className='countdown-label'>Hours</div>

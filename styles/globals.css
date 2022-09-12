@@ -16,6 +16,10 @@
     }
 
     .countdown-label {
-        @apply text-center text-white uppercase pt-2 text-xs
+        @apply text-center text-white uppercase pt-2 pb-4 text-xs
+    }
+
+    .admin-button {
+        @apply bg-[#00000052] p-2 rounded-md border-[#a54688] border-2 hover:bg-transparent opacity-50 hover:opacity-100 duration-500 text-sm shadow-lg
     }
 }

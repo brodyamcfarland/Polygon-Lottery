@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="grid grid-cols-2 md:grid-cols-5 justify-between items-center p-5">
-        <div className="flex items-center space-x-2 bg-[#0000004b] p-1 pl-3 rounded-md shadow-md">
+        <div className="flex items-center space-x-2 bg-[#00000070] p-1 pl-3 rounded-md shadow-md">
             <img
                 className="rounded-full h-10 w-10"
                 src={testImage}
